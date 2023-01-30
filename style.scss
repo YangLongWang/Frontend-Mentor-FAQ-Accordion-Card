@@ -74,7 +74,7 @@ body {
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  z-index: 99;
+  
   h1 {
     font-family: 'Kumbh Sans', sans-serif;
     color: var(--very-dark-desaturated-blue);
@@ -87,7 +87,7 @@ body {
       margin-bottom: 18px;
       font-family: 'Kumbh Sans', sans-serif;
       color: var(--very-dark-grayish-blue);
-      font-size: 14px;
+      font-size: 13px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -111,51 +111,62 @@ body {
 }
 
 @media screen and (max-width:375px) {
+  body {
+    width: 375px;
+  }
   .container {
     width: 328px;
     height: 536px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
     .icon {
       width: 328px;
       height: 150px;
       #icon-1 {
         width: 239px;
-        background: url('./images/bg-pattern-desktop.svg') no-repeat;
-        background-size: contain;
+        height: 150px;
+        background: url('./images/bg-pattern-desktop.svg') no-repeat center;
+        background-size: cover;
         left: 50%;
-        transform: translate(-50%, -25%);
+        top: 50%;
+        transform: translate(-50%, -81%);
+        background-position-y: -84px;
       }
       #icon-2 {
         width: 239px;
-        height: 150px;
         background: url('./images/illustration-woman-online-desktop.svg') no-repeat;
         background-size: contain;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -85%);
-        background-position-x: 0;
-        margin-top: 0;
+        transform: translate(-50%, -52%);
+
       }
       #icon-3 {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         background: url('./images/illustration-box-desktop.svg') no-repeat center;
         background-size: contain;
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(10%, -50%);
+        transform: translate(37%, -46%);
       }
     }
     .faq {
-      width: 239px;
+      width: 281px;
       height: 430px;
+      z-index: 99;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       align-items: center;
+      h1 {
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
       .questions {
-        width: 282px;
+        width: 281px;
         height: 284px;
         .question-title {
           font-size: 12px;
@@ -173,5 +184,6 @@ body {
   text-align: center;
   a {
    color: hsl(228, 45%, 44%);
+   text-decoration: none;
   }
 }
