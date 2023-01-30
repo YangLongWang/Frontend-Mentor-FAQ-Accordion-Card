@@ -46,15 +46,18 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: -573px -301px;
+  background-position: -573px -315px;
 }
 .icon #icon-2 {
   width: 460px;
   height: 359px;
   background: url("./images/illustration-woman-online-desktop.svg") no-repeat;
-  background-position-x: -80px;
-  margin-top: 50%;
-  transform: translateY(-50%);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: -70px 10px;
+  transform: translate(0%, 13%);
 }
 .icon #icon-3 {
   width: 191px;
@@ -63,7 +66,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(-50%, 100%);
+  transform: translate(-49%, 105%);
 }
 
 .faq {
@@ -109,6 +112,60 @@ body {
   padding-bottom: 23px;
 }
 
+@media screen and (max-width: 375px) {
+  .container {
+    width: 328px;
+    height: 536px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .icon {
+    width: 328px;
+    height: 150px;
+  }
+  .container .icon #icon-1 {
+    width: 239px;
+    background: url("./images/bg-pattern-desktop.svg") no-repeat;
+    background-size: contain;
+    left: 50%;
+    transform: translate(-50%, -25%);
+  }
+  .container .icon #icon-2 {
+    width: 239px;
+    height: 150px;
+    background: url("./images/illustration-woman-online-desktop.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -85%);
+    background-position-x: 0;
+    margin-top: 0;
+  }
+  .container .icon #icon-3 {
+    width: 150px;
+    height: 150px;
+    background: url("./images/illustration-box-desktop.svg") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10%, -50%);
+  }
+  .container .faq {
+    width: 239px;
+    height: 430px;
+    align-items: center;
+  }
+  .container .faq .questions {
+    width: 282px;
+    height: 284px;
+  }
+  .container .faq .questions .question-title {
+    font-size: 12px;
+  }
+}
 .attribution {
   margin-top: 40px;
   font-size: 11px;
